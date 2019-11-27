@@ -7,9 +7,7 @@ for i in range(n):
     user = input()
     try:
         entry = user.split(' ')
-        if entry:
-
-            phone_book[entry[0]] = entry[1]
+        phone_book[entry[0]] = entry[1]
     except:
         h = 1
     
