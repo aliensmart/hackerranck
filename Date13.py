@@ -4,9 +4,21 @@ class Book(object, metaclass=ABCMeta):
         self.title=title
         self.author=author   
     @abstractmethod
-    def display(): pass
+    def display(self): 
+        pass
 
 #Write MyBook class
+class MyBook(Book):
+    def __init__(self,title, author,  price=0):
+        Book.__init__(self, title, author)
+        self.price = price
+
+    def display(self):
+        print("Title: " + self.title)
+        print("Author: " + self.author)
+        print("Price: " + self.price)
+
+
 
 title=input()
 author=input()
