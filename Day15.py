@@ -12,7 +12,14 @@ class Solution:
             current = current.next
 
     def insert(self,head,data): 
-    #Complete this method
+        newNode = Node(data)
+        if not head:
+            return newNode
+        current = head
+        while current.next:
+            current = current.next
+        current.next = newNode
+        return head
 
 mylist= Solution()
 T=int(input())
